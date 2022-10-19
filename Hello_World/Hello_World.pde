@@ -28,6 +28,8 @@ void setup() {
 } //End setup
 //
 void draw() {
+  ellipse(400, 150, 220, 220);
+  triangle(120, 300, 230, 80, 350, 300);
 } //End draw
 //
 void keyPressed() {
