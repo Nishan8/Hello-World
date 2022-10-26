@@ -1,9 +1,10 @@
 //Global Variables
 int appWidth, appHeight;
+float centerX, centerY, xStart, yStart, widthRect, heightRect;
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, portrait
-  size(900, 900); //Able to deploy with fullScreen();
+  size(700, 400); //Able to deploy with fullScreen();
   //fullScreen();
   appWidth = width;
   appHeight = height;
@@ -25,16 +26,20 @@ void setup() {
       //Empty ELSE
     }
   }
+  //Population
+  centerX = width * 1/2;
+  centerY = height * 1/2;
+  xStart = centerX - ( width * 1/4 );
+  yStart  = centerY - ( height * 1/4 );
+  widthRect = width * 1/2;
+  heightRect = height * 1/2;
 } //End setup
 //
 void draw() {
-  rect(300, 260, 200, 400);
-  ellipse(400, 150, 220, 220);
-  quad(152, 124, 344, 80, 276, 252, 120, 304);
-  rect(300, 650, 100, 300);
-  rect(400, 650, 100, 300);
-  rect(500, 260, 100, 300);
-
+  // New Background Function "covers" old gray scale background()
+  // Night Mode means background cannot have blue // change randome for night mode, hard code "0"
+  background(0); //Gray Scale & Blue Issue for night mode
+  rect(xStart, yStart, widthRect, heightRect);
 } //End draw
 //
 void keyPressed() {
