@@ -2,7 +2,9 @@
 int appWidth, appHeight;
 float centerX, centerY, xStart, yStart, widthRect, heightRect;
 color blackNightMode=#000000, green=#56E510, purple=#FA00F6, white=#FFFFFF; //Hexidecimal
+color greenNightMode=, PurpleNightMode
 float thin, normal, thick;
+Boolean nightmode=false, nightmode=true
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, portrait
