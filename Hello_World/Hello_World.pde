@@ -2,7 +2,7 @@
 int appWidth, appHeight;
 float centerX, centerY, xStart, yStart, widthRect, heightRect;
 color blackNightMode=#000000, green=#56E510, yellow=#FAFF03, white=#FFFFFF; 
-color greenNightMode=#044801, yellowNightMode=#D4D66A;//Hexidecimal
+color greenNightMode=#044801, yellowNightMode=#F6FF08;//Hexidecimal
 float thin, normal, thick;
 Boolean grayScale=false, backgroundColour=false, nightMode=false;
 //
@@ -42,7 +42,7 @@ void setup() {
   thick = appWidth * 1/35;
 } //End setup
 //
-void draw() {
+void draw(){
   // New Background Function "covers" old gray scale background()
   // Night Mode means background cannot have blue // change randome for night mode, hard code "0"
   if ( grayScale == true ) background(100); //Gray Scale (0-255) & Blue Issue for night mode
