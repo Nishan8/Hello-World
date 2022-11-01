@@ -5,8 +5,16 @@ color blackNightMode=#000000, green=#56E510, yellow=#FAFF03, white=#FFFFFF;
 color greenNightMode=#044801, yellowNightMode=#F6FF08;//Hexidecimal
 float thin, normal, thick;
 Boolean grayScale=false, backgroundColour=false, nightMode=false;
+/**
+ * Continuous Lines. 
+ * 
+ * Click and drag the mouse to draw a line. 
+ */
 //
 void setup() {
+   size(640, 360);
+  background(102);
+
   //Declaring Display Geometry: landscape, square, portrait
   size(700, 400); //Able to deploy with fullScreen();
   //fullScreen();
@@ -78,5 +86,12 @@ void mousePressed() {
   if ( mouseButton == LEFT ) nightMode = true;
   if ( mouseButton == RIGHT ) nightMode = false;
 } //End mousePressed
+//
+void draw() {
+  stroke(255);
+  if (mousePressed == true) {
+    line(mouseX, mouseY, pmouseX, pmouseY);
+  }
+}
 //
 // End Main Program
