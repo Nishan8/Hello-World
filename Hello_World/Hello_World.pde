@@ -1,20 +1,12 @@
 //Global Variables
 int appWidth, appHeight;
 float centerX, centerY, xStart, yStart, widthRect, heightRect;
-color blackNightMode=#000000, green=#56E510, yellow=#FAFF03, white=#FFFFFF; 
-color greenNightMode=#044801, yellowNightMode=#F6FF08;//Hexidecimal
+color blackNightMode=#000000, yellow=#F8FC64, purple=#FA00F6, white=#FFFFFF; 
+color yellowNightMode=#F8FC00, purpleNightMode=#FA0096;//Hexidecimal
 float thin, normal, thick;
 Boolean grayScale=false, backgroundColour=false, nightMode=false;
-/**
- * Continuous Lines. 
- * 
- * Click and drag the mouse to draw a line. 
- */
 //
 void setup() {
-   size(640, 360);
-  background(102);
-
   //Declaring Display Geometry: landscape, square, portrait
   size(700, 400); //Able to deploy with fullScreen();
   //fullScreen();
@@ -50,7 +42,7 @@ void setup() {
   thick = appWidth * 1/35;
 } //End setup
 //
-void draw(){
+void draw() {
   // New Background Function "covers" old gray scale background()
   // Night Mode means background cannot have blue // change randome for night mode, hard code "0"
   if ( grayScale == true ) background(100); //Gray Scale (0-255) & Blue Issue for night mode
@@ -62,12 +54,12 @@ void draw(){
   if ( nightMode == true )
   {
     background( blackNightMode );
-    stroke( greenNightMode ); 
-    fill( yellowNightMode ); 
+    stroke( yellowNightMode ); 
+    fill( purpleNightMode ); 
   } else
   {
-    stroke( green ); 
-    fill( yellow ); 
+    stroke( yellow ); 
+    fill( purple ); 
   }
   rect(xStart, yStart, widthRect, heightRect);
   fill( white ); //default reset
@@ -86,12 +78,5 @@ void mousePressed() {
   if ( mouseButton == LEFT ) nightMode = true;
   if ( mouseButton == RIGHT ) nightMode = false;
 } //End mousePressed
-//
-void draw() {
-  stroke(255);
-  if (mousePressed == true) {
-    line(mouseX, mouseY, pmouseX, pmouseY);
-  }
-}
 //
 // End Main Program
