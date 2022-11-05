@@ -98,8 +98,8 @@ void draw() {
 void keyPressed() {
   grayScale = false;
   backgroundColour = false;
-  if ( key == 'G' || key == 'g' ) grayScale = true;
-  if ( key == 'B' || key == 'b' ) backgroundColour = true;
+  if ( key == 'W' || key == 'w' ) grayScale = true;
+  if ( key == 'A' || key == 'a' ) backgroundColour = true;
 } //End keyPressed
 //
 void mousePressed() {
