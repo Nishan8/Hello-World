@@ -25,7 +25,7 @@ void setup() {
   generate(mountain3, m3y, m3s);
   noStroke();
   //Declaring Display Geometry: landscape, square, portrait
-  size(700, 400); //Able to deploy with fullScreen();
+  //Able to deploy with fullScreen();
   //fullScreen();
   appWidth = width;
   appHeight = height;
